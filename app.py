@@ -35,16 +35,13 @@ def create_database():
         VALUES (?, ?, ?, ?, ?)
         """, [
             (
-                'Thirukkural', 'Thiruvalluvar', 'Tamil', 'Ancient Tamil couplets',
-                'https://www.scribd.com/document/456942075/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%95-%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%B3-%E0%AE%8E%E0%AE%B3%E0%AE%BF%E0%AE%AF-%E0%AE%89%E0%AE%B0%E0%AF%88-pdf'
-            ),
+                'Thirukkural', 'Thiruvalluvar', 'Tamil', 'Ancient Tamil couplets','https://www.scribd.com/document/456942075/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%95-%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%B3-%E0%AE%8E%E0%AE%B3%E0%AE%BF%E0%AE%AF-%E0%AE%89%E0%AE%B0%E0%AF%88-pdf'),
             (
-                'Gitanjali', 'Rabindranath Tagore', 'Bengali', 'Poems of devotion',
-                'https://archive.org/details/gitanjali00unse/page/n21/mode/2up'
+                'Gitanjali', 'Rabindranath Tagore', 'Bengali', 'Poems of devotion','https://archive.org/details/gitanjali00unse/page/n21/mode/2up'
             ),
             (
                 'Panchatantra', 'Vishnu Sharma', 'Sanskrit', 'Stories with morals',
-                'https://archive.org/details/PanchatantraSanskritHindi-JpMishra1910'
+               'https://www.banyantree.in/jagdishpur/wp-content/uploads/2020/06/Panchatantra-.pdf'
             )
         ])
         conn.commit()
