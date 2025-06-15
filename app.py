@@ -54,7 +54,6 @@ def display_books():
     conn = sqlite3.connect("ebooks.db")
     cursor = conn.cursor()
 
-    # Fetch all books
     cursor.execute("SELECT book_id, title, author, language, description, file_path FROM books")
     books = cursor.fetchall()
 
@@ -64,15 +63,13 @@ def display_books():
     for book in books:
         book_id, title, author, language, description, file_path = book
 
-        # Unique key for each book
-        click_key = f"book_clicks_{book_id}"
+        btn_key = f"btn_{book_id}"            # Different key for button widget
+        click_key = f"clicks_{book_id}"       # Different key for session state counter
 
-        # Initialize session state
         if click_key not in st.session_state:
             st.session_state[click_key] = 0
 
-        # Book button
-        if st.button(f"📖 {title} by {author} ({language})", key=click_key):
+        if st.button(f"📖 {title} by {author} ({language})", key=btn_key):
             st.session_state[click_key] += 1
 
             if st.session_state[click_key] == 2:
